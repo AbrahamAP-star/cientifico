@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'main.js',
-        publicPath: './'
+        publicPath: '/'
     },
     resolve: {
         extensions: ['.js']
@@ -28,11 +28,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: true,
             template: './public/index.html',
-            filename: './index.html'
+            filename: 'index.html'
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: "src/styles/styles.css", to: "styles.css" }
+                { from: "src/styles", to: "" }
             ]
         })
          
